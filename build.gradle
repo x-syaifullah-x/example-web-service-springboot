@@ -21,12 +21,15 @@ repositories {
 }
 
 dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web-services'
+
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.mariadb.jdbc:mariadb-java-client'
     implementation 'org.flywaydb:flyway-core'
-    implementation 'org.springframework.boot:spring-boot-starter-web-services'
+
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
+
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
