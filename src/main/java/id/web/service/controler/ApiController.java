@@ -32,7 +32,7 @@ public class ApiController {
     @ResponseBody
     public Map<String, Iterable<Entity>> dataList() {
         Map<String, Iterable<Entity>> data = new LinkedHashMap<>();
-        data.put("test", dao.findAll());
+        data.put(data.toString(), dao.findAll());
         return data;
     }
 
@@ -66,7 +66,7 @@ public class ApiController {
             data.get().setId(id);
             dao.save(data.get());
         } else {
-            System.out.println("not found");
+            System.err.println("not found");
         }
     }
 
